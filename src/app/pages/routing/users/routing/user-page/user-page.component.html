@@ -1,0 +1,60 @@
+<form (ngSubmit)="submitForm()" [formGroup]="userForm" class="user-form" ngForm>
+  <div class="user-form__title-row">
+    <h3 class="user-form__title">{{formType === 'edit' ? fullName : createUserTitle}}</h3>
+    <button (click)="cancelUserForm()" class="close-btn">&#x2715;</button>
+  </div>
+  <div class="user-form__input-wrapper">
+    <label class="user-form__label" for="name">Username *</label>
+    <input class="user-form__input" formControlName="username"
+           formValidation="Username" id="name"
+           type="text">
+    <div class="validation-error"></div>
+  </div>
+  <div class="user-form__input-wrapper">
+    <label class="user-form__label" for="first-name">First Name *</label>
+    <input class="user-form__input" formControlName="firstName" formValidation="First Name" id="first-name" type="text">
+    <div class="validation-error"></div>
+  </div>
+  <div class="user-form__input-wrapper">
+    <label class="user-form__label" for="last-name">Last name *</label>
+    <input class="user-form__input" formControlName="lastName" formValidation="Last Name" id="last-name" type="text">
+    <div class="validation-error"></div>
+  </div>
+  <div class="user-form__input-wrapper">
+    <label class="user-form__label" for="email">Email *</label>
+    <input class="user-form__input" formControlName="email" formValidation="Email" id="email" type="text">
+    <div class="validation-error"></div>
+  </div>
+  <div class="user-form__input-wrapper">
+    <label class="user-form__label" for="name">Type *</label>
+    <select class="user-form__input" formControlName="userType" formValidation="Type" id="type">
+      <option [value]="null" disabled>Select user type</option>
+      <option value="User">User</option>
+      <option value="Admin">Admin</option>
+    </select>
+    <div class="validation-error"></div>
+  </div>
+  <div class="user-form__input-wrapper">
+    <label class="user-form__label" for="name">Password *</label>
+    <input class="user-form__input" formControlName="password" formValidation="Password" id="password" type="password">
+    <div class="validation-error"></div>
+  </div>
+  <div class="user-form__input-wrapper">
+    <label class="user-form__label" for="name">Repeat password *</label>
+    <input class="user-form__input" formControlName="repeatPassword" formValidation="Repeat Password"
+           id="repeat-password" type="password">
+    <div class="validation-error"></div>
+    <div *ngIf="userForm.hasError('passwordMismatch')" class="validation-error">
+      Passwords do not match
+    </div>
+  </div>
+  <div *ngIf="formType === 'edit' else createUserSubmit" class="user-form__submit-btn-line">
+    <button-ui (onClick)="deleteUser($event)" type="error">Delete</button-ui>
+    <button-ui [disabled]="this.userForm.invalid">Save</button-ui>
+  </div>
+  <ng-template #createUserSubmit>
+    <div class="user-form__submit-btn-line_one-button">
+      <button-ui [disabled]="this.userForm.invalid">Create</button-ui>
+    </div>
+  </ng-template>
+</form>

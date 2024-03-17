@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+:root {
+  --main-bg: #f4f5f8;
+  --white-bg: white;
+  --main-button-bg: #2E8FF0;
+  --error-bg: #f44682;
+  --main-text-color: #3f4254;
+}

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="users">
+    <button-ui (onClick)="goToCreatingUser()">Create User</button-ui>
+    <ng-container *ngIf="(users$ | async) as users; else noUsers">
+      <table-ui (onRowClick)="goToUser($event)" [data]="users"></table-ui>
+    </ng-container>
+    <ng-template #noUsers>
+      <div>No users</div>
+    </ng-template>
+  </div>
+  <div class="user">
+    <router-outlet></router-outlet>
+  </div>
+</div>

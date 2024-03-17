@@ -1,0 +1,20 @@
+<table class="table">
+  <thead class="table__header">
+  <tr>
+    <th class="table__cell">Username</th>
+    <th class="table__cell">First Name</th>
+    <th class="table__cell">Last Name</th>
+    <th class="table__cell">Email</th>
+    <th class="table__cell">Type</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr (click)="onRowClick.emit(tableItem.id)" *ngFor="let tableItem of data" class="table__row">
+    <td class="table__cell">{{tableItem.username}}</td>
+    <td class="table__cell">{{tableItem.firstName}}</td>
+    <td class="table__cell">{{tableItem.lastName}}</td>
+    <td class="table__cell">{{tableItem.email}}</td>
+    <td class="table__cell">{{tableItem.userType}}</td>
+  </tr>
+  </tbody>
+</table>

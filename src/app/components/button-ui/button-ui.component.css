@@ -1,0 +1,18 @@
+.button {
+  padding: 15px 20px;
+  color: var(--white-bg);
+  background: var(--main-button-bg);
+  box-shadow: 0 5px 8px #2E8FF029;
+  border-radius: 6px;
+}
+
+.button__error {
+  background: var(--error-bg);
+}
+
+.button[disabled] {
+  background: var(--main-bg);
+  color: var(--main-text-color);
+  box-shadow: none;
+  cursor: not-allowed;
+}

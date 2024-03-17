@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "username": "nick",
+      "firstName": "Juliet",
+      "lastName": "Oma",
+      "email": "julie@yahoo.com",
+      "password": "qqqqQ1!!",
+      "userType": "Admin",
+      "id": "1"
+    },
+    {
+      "username": "Abdul ",
+      "firstName": "Abdul",
+      "lastName": "Redbull",
+      "email": "gakop94751@wuzak.com",
+      "password": "qqqqQ1!!",
+      "userType": "User",
+      "id": "53c0"
+    },
+    {
+      "username": "Juliy!!!",
+      "firstName": "Juliet",
+      "lastName": "Oma",
+      "email": "julie@yahoo.com",
+      "password": "qqqqQ1!!",
+      "userType": "Admin",
+      "id": "d7b3"
+    }
+  ]
+}

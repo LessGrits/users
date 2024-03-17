@@ -1,0 +1,26 @@
+:host, .table {
+  width: 100%;
+  background: var(--white-bg);
+  border-radius: 6px;
+}
+
+.table {
+  box-shadow: 0 0 30px #523F690D;
+  border-collapse: collapse;
+  margin-bottom: 4rem;
+}
+
+.table__header {
+  color: #a4a4b5;
+}
+
+.table__row {
+  background: var(--main-bg);
+  border-bottom: 2px solid var(--white-bg);
+  color: var(--main-text-color);
+}
+
+.table__cell {
+  text-align: left;
+  padding: 1.5rem;
+}

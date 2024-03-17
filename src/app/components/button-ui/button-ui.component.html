@@ -1,0 +1,3 @@
+<button (click)="onClick.emit($event)" [class.button__error]="type === 'error'" [disabled]="disabled" class="button">
+  <ng-content></ng-content>
+</button>
